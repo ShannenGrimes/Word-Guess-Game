@@ -1,0 +1,11 @@
+html {
+height: 100%;
+margin: 0 auto
+} 
+
+.container {
+    font-family: 'Acme', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Open Sans', sans-serif;
+    background-color: beige;
+}
