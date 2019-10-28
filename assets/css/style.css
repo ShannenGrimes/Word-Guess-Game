@@ -4,6 +4,9 @@ margin: 0;
 } 
 
 body {
+    font-family: 'Acme', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Open Sans', sans-serif;
     background-image: url(../images/leopard.jpg);
     background-size: cover;
     background-position: center 50%;
@@ -11,10 +14,5 @@ body {
     background-color: black;
 
 }
-.container {
-    font-family: 'Acme', sans-serif;
-    font-family: 'Luckiest Guy', cursive;
-    font-family: 'Open Sans', sans-serif;
-    background-color: beige;
-}
+
 
