@@ -9,7 +9,7 @@ var animalNames = [
     "WOLF",
 ];
 
-tr {
-    display: block;
-    border-bottom: 1px solid #000;
+@media (min-width: 576px)
+.jumbotron {
+    padding: 2rem 2rem;
 }
