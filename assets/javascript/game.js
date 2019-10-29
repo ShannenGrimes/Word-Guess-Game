@@ -9,3 +9,7 @@ var animalNames = [
     "WOLF",
 ];
 
+tr {
+    display: block;
+    border-bottom: 1px solid #000;
+}
