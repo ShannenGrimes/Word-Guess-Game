@@ -14,7 +14,7 @@
     <title>Word Guess Game - Zoo Animals</title>
 </head>
 
-<body>
+<body id:="initializeGame">
     <div class="jumbotron">
         <h1><b>Zoo Safari - Animal Names</b></h1>
         <h2><b>Word Guessing Game</b></h2>
@@ -22,7 +22,7 @@
     <div class="row" id=counter class="text-center">
         <div class="col-lg-12 pb-20">
             <div>
-                <h4 id="pressbtn" onekeyup="start()">Press any key to begin!!</h4>
+                <h4 id="pressbtn" class="onekeydown">Press any key to begin!!</h4>
                 <h5>Guess the Animal: <span id="animal" class="varchar"></span></h5>
             </div>
             <br>
@@ -35,7 +35,7 @@
             </div>
 
             <div>
-                <h6>Total Already Guessed: <span id="alreadyGuessed" class="varColor"></span></h6>
+                <h6>Letters Already Guessed: <span id="usedGuessedWords" class="varColor"></span></h6>
             </div>
         </div>
     </div>

@@ -25,17 +25,16 @@ function initializeGame() {
         else {
             guessedWord.push("_");
         }
-        updateDisplay();
+    updateDisplay();
     };
-
-    initializeGame();
 };
+    initializeGame();
 // Resets the game
 function resetGame() {
-   if (usedGuessedWords.length === animalNames.length){
-      usedGuessedWords= []
-      totalWins=0
-      setTimeout(resetGame, 500);
+    if (usedGuessedWords.length === animalNames.length){
+        usedGuessedWords= []
+        totalWins=0
+        setTimeout(resetGame, 500);
     }
     else {
         pause=false;
@@ -54,32 +53,51 @@ function resetGame() {
     }
     // Reset
     for (var i=0; i < wordMatch.length; i++){
-     if (wordMatch[i] +++ " "){
-         guessedWord.push(" ")
-     }   
+        if (wordMatch[i] +++ " "){
+        guessedWord.push(" ")
+        }   
     }
     updateDisplay(); 
-};
-// Update the display
-function updateDisplay () {
-    document.getElementById("totalWins").innerText = wins;
-    document.getElementById("animalNames").innerText = guessedWord.join("");
-    document.getElementById("guessesLeft").innerText = numGuess;
-    document.getElementById("usedGuessedWords").innerText =  .join(" ");
-  };
-// Button press
-document.onkeydown = function(event) {
-    if (isLetter(event.key) && pause === false) {
-    checkForLetter(event.key.toUpperCase());
-    }
-};
-// Checking for letters
-var isLetter = function(ch){
-    return typeof ch === "string" && ch.length === 1
-    && (ch >= "a" && ch <= "z" || ch >= "A" && ch <= "Z");
-  };
-//  Checking to see if letters are in the word 
-function checkForLetter(letter) {
-    var foundLetter = false;
+    
+}; 
+    // Update the display
+    function updateDisplay () {
+        document.getElementById("totalWins").innerText = wins;
+        document.getElementById("animalNames").innerText = guessedWord.join("");
+        document.getElementById("guessesLeft").innerText = numGuess;
+        document.getElementById("usedGuessedWords").innerText = usedGuessedWords.join(" ");
+    };
+    // Button press
+    document.onkeydown = function(event) {
+        if (isLetter(event.key) && pause === false) {
+        checkForLetter(event.key.toUpperCase());
+        }
+    };
+    // Checking for letters
+    var isLetter = function(ch){
+        return typeof ch === "string" && ch.length === 1
+        && (ch >= "a" && ch <= "z" || ch >= "A" && ch <= "Z");
+    };
+    //  Checking to see if letters are in the word 
     function checkForLetter(letter) {
-    var foundLetter = false;
+        var foundLetter = false;
+        function checkForLetter(letter) {
+        var foundLetter = false;
+        // Search string for letter
+    for (var i=0; i < wordToMatch.length; i++) {
+        if (letter === wordToMatch[i]) {
+        guessingWord[i] = letter
+        foundLetter = true
+        // If guessing word matches random word
+        if (guessingWord.join("") === wordToMatch) {
+            // Increment # of wins and add word to usedGuessingWords
+            wins++
+            // Add word to usedGuessingWords array to not be repeated
+            usedGuessingwWords.push(wordToMatch)
+            console.log(usedGuessingwWords)
+            pause = true;
+            sound.play();
+            updateDisplay();
+            setTimeout(resetGame, 4000);
+        };
+    };
