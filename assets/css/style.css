@@ -24,13 +24,13 @@ canvas {
 }
 
 .row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    display: float;
+    display: auto;
     margin-right: -15px;
     margin-left: -15px;
-    color: lightgoldenrodyellow;
+    margin-top: -px;
+    color: darkslategray;
+    background-color: antiquewhite;
 }
 
 .button {
