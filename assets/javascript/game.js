@@ -1,7 +1,7 @@
 // Starting game
 function initializeGame() { 
     //Variables
-    var animalNames = ["ELEPHANT", "HYENA", "LEOPARD", "MONKEY", "PIG", "SEAL", "TIGER","WOLF",];
+    var animalNames = ["ELEPHANT", "HYENA", "LEOPARD", "MONKEY", "PIG", "SEAL", "TIGER","WOLF"];
     var guessesLeft = [];
     var guessedWord = [];
     var usedGuessedWords = [];
